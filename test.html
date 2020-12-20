@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <p><label for="wheelDelta"> 滚动值:</label>(IE/Opera)<input type="text" id="wheelDelta" /></p>
+    <p><label for="detail"> 滚动值:(Firefox)</label><input type="text" id="detail" /></p> -->
+    <div>
+        <!-- <button id="btnaddurl" onclick="addurl()">添加文档外网地址</button> -->
+        <button id="btnaddurl" >添加文档外网地址</button>
+        <a id="showdoc" href="">显示word</a>
+    </div>
+    <script type="text/javascript">
+
+        const  baseurl = 'http://view.officeapps.live.com/op/view.aspx?src='
+
+        let   docxurl =  'http://192.168.31.114:8081/testdoc/a.docx'
+
+        let   lasturl = baseurl +  encodeURIComponent(docxurl)
+
+    
+        let  btn = document.getElementById("btnaddurl");
+
+        //  function addurl (){
+        //     document.getElementById("showdoc").href = lasturl
+
+        //     console.log(document.getElementById("showdoc").href)
+        // }
+
+        btn.onclick = function(){
+
+            document.getElementById("showdoc").href = lasturl
+
+            console.log(document.getElementById("showdoc").href)
+        }
+
+       
+    
+    </script>
+</body>
+
+</html>
